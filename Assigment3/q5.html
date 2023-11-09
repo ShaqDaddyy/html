@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".b1").click(function() {
+                $(".d").animate({left: "1100px",
+            opacity: "0.2",
+            height: "40px",
+            width:"100px"
+        });
+            });
+            $("p1").mouseenter(function(){
+            alert("you have touched the html elements.");
+            });
+            $("p2").mouseleave(function(){
+              alert("you leaved the html elements.");
+            });
+            $(".b2").click(function(){
+                $("p3").hide(2000);
+            });
+            $("p4").dblclick(function(){
+                $("p4").hide(2000);
+            });
+            $("#flip").click(function(){
+                $("#panel").slideDown(2000);
+            });
+            $(".b3").click(function(){
+                $("p3").show(2000);
+            });
+            $(".b4").click(function(){
+                $("#1").fadeIn(2000);
+            });
+            $(".b5").click(function(){
+                $("img").attr("width","500");
+            });
+            $(".b6").click(function(){
+               $("p").html("Hello <b>world!</b>");
+           });
+        });
+    </script>
+    <style>
+        #panel, #flip {
+        padding: 10px;
+        text-align: left;
+        background-color: dodgerblue;
+        border: solid 5px purple;
+        }
+        #panel {
+        padding: 60px;
+        display: none;
+        }
+        </style>
+</head>
+<body>
+    <div class="d" style="background-color: aqua; height: 30px; width: 100px; position: fixed;">Animate</div>
+    <br>
+    <br>
+    <button class="b1">Animate</button>
+    <br>
+    <br>
+    <p1>hover around me</p1>
+    <br>
+    <p2>hover around me</p2>
+    <br>
+    <p3>click me</p3>
+    <button class="b2">hide</button>
+    <button class="b3">show</button>
+    <br>
+    <p4>Double click me</p4>
+    <br>
+    <div id="flip">When this area is clicked, a panel emerges.</div>
+    <div id="panel">The panel greets the user with Merry Christmas!</div>
+    <br>
+    <br>
+    <div id="1" style="width:40px; height:60px; display:none; background-color:brown;">
+    </div>
+    <br>
+    <button class="b4">show color</button>
+    <br>
+    <br>
+    <img src="https://i.pinimg.com/280x280_RS/aa/7f/2b/aa7f2be0109e136fd16da425e7b154e6.jpg" width="300px" height="400px"><br>
+    <button class="b5">Set the width attribute of the image</button>
+    <br>
+    <br>
+    <button class="b6">Change content of all p elements</button>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+</body>
+</html>

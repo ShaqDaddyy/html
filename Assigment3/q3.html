@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <form>
+        <input id="field1" type="text" value="Field 1">
+        <input id="field2" type="text" value="Field 2">
+    </form>
+    <br>
+    
+    <script>
+        $(document).ready(function(){
+            $("input").blur(function(){
+                alert("Input has loset its focus");
+            });
+        });
+    </script>
+</body>
+</html>
